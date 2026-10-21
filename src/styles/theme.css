@@ -1,0 +1,107 @@
+:root {
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --nav-width: 220px;
+  --titlebar-height: 40px;
+  --font-sans: "Segoe UI", "Microsoft YaHei UI", -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root,
+[data-theme="dark"] {
+  --bg: #16181d;
+  --bg-elevated: #1d2026;
+  --surface: #23272f;
+  --surface-hover: #2b3038;
+  --border: #31363f;
+  --text: #e8eaed;
+  --text-dim: #9aa0a6;
+  --text-faint: #6b7280;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] {
+  --bg: #f5f6f8;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
+  --surface-hover: #f0f2f5;
+  --border: #e2e5ea;
+  --text: #1f2328;
+  --text-dim: #626b76;
+  --text-faint: #98a1ac;
+  --shadow: 0 2px 8px rgba(16, 24, 40, 0.08);
+}
+
+[data-accent="blue"]   { --accent: #3b82f6; --accent-hover: #2f74e6; }
+[data-accent="purple"] { --accent: #8b5cf6; --accent-hover: #7c4cf0; }
+[data-accent="green"]  { --accent: #22c55e; --accent-hover: #1fb655; }
+[data-accent="orange"] { --accent: #f97316; --accent-hover: #ea6a0c; }
+[data-accent="pink"]   { --accent: #ec4899; --accent-hover: #dd3a8b; }
+[data-accent="red"]    { --accent: #ef4444; --accent-hover: #e03838; }
+[data-accent="cyan"]   { --accent: #06b6d4; --accent-hover: #05a6c1; }
+[data-accent="amber"]  { --accent: #f59e0b; --accent-hover: #e38f06; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+input,
+textarea {
+  user-select: text;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+  background-clip: content-box;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.16s var(--ease);
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

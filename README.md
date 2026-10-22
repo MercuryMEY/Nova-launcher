@@ -1,7 +1,7 @@
 # Nova Launcher
 
-基于 **Tauri 2 + Vue 3 + Rust** 的跨平台 Minecraft 启动器，功能对标 PCL2（非移植，完全重写）。
-体积小、启动快，不依赖 Electron；核心逻辑全在 Rust 侧，前端只管界面。
+基于 **Tauri 2 + Vue 3 + Rust** 的跨平台 Minecraft 启动器，功能对标 PCL2。
+不依赖 Electron；核心逻辑全在 Rust 侧，前端只管界面。
 
 ## 功能一览
 
